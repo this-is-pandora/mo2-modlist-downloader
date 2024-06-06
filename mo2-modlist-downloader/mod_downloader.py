@@ -16,30 +16,12 @@ class ModlistDownloader(mobase.IPluginTool):
         a modlist")
     def version(self) -> mobase.VersionInfo:
         return mobase.VersionInfo(1,0,0,mobase.ReleaseType.FINAL)
-    def _tr(): # stub fxn for now
-        pass
 
     #TODO: installation methods go here. Placeholdrs for now
     def checkFOMod() -> bool:
         pass
-    # retrieve list of mods currently installed
-    def getModlist():
-        pass
-    # stores a mod's info as a dictionary
-    def storeMod(name='', author='', version='', link='') -> dict:
-        mod = {'name': name, 'author': author, 'version': version, 'link':link}
-        return mod
-    # creates a dictionary of various of mods, indexed by number/priority
-    def createModlist(): # perhaps as a json file
-        modlist = {}    # TODO: make this code more elegant
-        mod = storeMod()
-        modlist.fromkeys(range(0, 4))
-        modlist.update({0:mod})
-    # store the modlist as a json file
-    def storeModlist():
-        pass
     # reads json file into a dictionary object (called 'modlist')
-    def readModlist():
+    def getModlist():
         pass
     # download a mod via Nexus API
     def downloadMod():
